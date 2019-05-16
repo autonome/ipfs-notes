@@ -7,10 +7,16 @@
 
 ## Activities
 
-* Browsers
+* Browser integrations
 * Metrics
-* Events
-* IPFS Companion
+* Collaborations
+* IPFS Camp
+* Internet governance (IGF)
+
+Themes
+* privacy
+* offline
+* anonymity
 
 ## Playtime
 
@@ -43,7 +49,31 @@ Defining the primary user needs addressed by IPFS.
 * Reading
   * access to stored content
 
-## Web Standards & Browser Dependencies
+## Questions, Concerns, Challenges
+
+Real feedback from the real world.
+
+* "I can't delete files" - revenge porn, intentional or accidental exposure, sysadmin requests to DMCA takedowns
+  ** Mastodon author Gargron - https://github.com/tootsuite/mastodon/issues/360#issuecomment-300249551
+* "How do my files stay up?" - the magical promise and the start reality
+  * "pinning" doesn't make sense to developers - need to use their language
+  * TODO: Find some good examples
+* "It's so slow"
+  * TODO: find those HN and Reddit thread comments
+* "Makes my laptop hot and pegs CPU"
+  * TODO: find those HN and Reddit thread comments
+
+## Projects choosing IPFS or not
+
+* Mastodon (not)
+	* https://mastodon.social/@Gargron/102050448708258784
+  * https://github.com/tootsuite/mastodon/issues/360
+  * https://github.com/tootsuite/mastodon/issues/477
+
+* Choosing IPFS over blockchain
+  * https://cryptoinsider.com/exclusive-xyo-head-of-community-explains-why-they-chose-ipfs-not-blockchain/
+
+## Web Standards / Browser Dependencies
 
 Features of Interest
 
@@ -65,6 +95,7 @@ Gecko issues of interest
 
 Chromium
 * [webRequest: add property to event data indicating which navigation the resource is for](https://bugs.chromium.org/p/chromium/issues/detail?id=637002)
+* [Extensions should be able to register for protocols](https://bugs.chromium.org/p/chromium/issues/detail?id=64100#c12)
 
 Dapps
 * [Add dweb.link to public suffix list](https://github.com/publicsuffix/list/pull/766)
@@ -73,15 +104,23 @@ mDNS and related
 * [Add Network Service Discovery API support](https://bugzilla.mozilla.org/show_bug.cgi?id=914579)
 * [Add support for Bonjour (Rendezvous/zeroconfig) to browser](https://bugzilla.mozilla.org/show_bug.cgi?id=173804)
 
-## Metrics
+## Good Explanations
 
-* https://github.com/protocol/metrics
+* [How /webui works](https://github.com/ipfs-shipyard/ipfs-companion/issues/718#issuecomment-490257566)
+* [What "pinning" means, in detail](https://github.com/ipfs/integration-mini-projects/issues/4#issuecomment-490165343) 
+* [On running IPFS on a laptop and moving between networks](https://github.com/ipfs/community/issues/408#issuecomment-490032167)
+* [What makes something p2p (technical, still need a good non-technical)](https://github.com/qri-io/p2p-testbed#okay-so-what-makes-this-p2p)
+
 ## Privacy
 
 * [How private is IPFS?](https://medium.com/pinata/ipfs-privacy-711f4b72b2ea?sk=de4e4a95b19260bda95fe695e63099cd) - good overview, Apr 5 2019, from Matt Ober @ Piñata
 * [P2P privacy research papers](https://github.com/gpestana/p2psec/tree/master/research) - notes from Gonçalo Pestana
 
 * [Infra blocklist](https://github.com/ipfs/infra/blob/master/ipfs/gateway/denylist.conf)
+
+* https://discuss.ipfs.io/t/is-it-possible-to-store-private-objects-in-ipfs-without-encrypting-them/460
+* https://www.researchgate.net/publication/320853144_IoT_data_privacy_via_blockchains_and_IPFS
+* https://www.reddit.com/r/ipfs/comments/9puvpo/question_about_ipfs_and_privacyright_to_be/
 
 ## Slang
 
@@ -143,6 +182,9 @@ mDNS and related
 * dht
 * browser integration permutations
 
+existing
+* https://app.mural.co/t/protocollabs6957/m/protocollabs6957/1537221476917/c9ca4403fac4054cac765237f6a9bc2a7cebec98
+
 ## Standards participation
 
 * membership
@@ -151,6 +193,20 @@ mDNS and related
 * use-cases
 * mailing lists
 * feedback
+
+## Dweb pitch examples
+
+* https://publishing.graphitedocs.com/sites/graphite.id/public/2236c29c-39b9-4ff3-9b97-5a5e24cf0af9
+* https://www.inkandswitch.com/local-first.html
+
+## Deployment how-tos
+
+* https://withblue.ink/2018/11/14/distributed-web-host-your-website-with-ipfs-clusters-cloudflare-and-devops.html
+* https://github.com/AuHau/ipfs-publish
+
+## Community discussion
+
+* [HN on 2019 roadmap](https://news.ycombinator.com/item?id=19647692)
 
 ## Browser vendor strategy
 
@@ -175,11 +231,16 @@ Classify
 
 ## Brave
 
+* https://github.com/brave/brave-browser/issues/819
 * [Brave issue tracking IPFS install prompt](https://github.com/brave/brave-browser/issues/3045)
+* https://github.com/brave/brave-core/pull/1988
+* https://github.com/brave/brave-core/pull/2328
+
 
 ## Opera
 
 * https://twitter.com/ensdomains/status/1102884419017297921?s=19
+* https://medium.com/the-ethereum-name-service/how-opera-is-using-ens-to-decentralize-the-web-ens-integration-spotlight-a545f7825724
 
 ## Mozilla
 
@@ -189,6 +250,8 @@ Classify
 
 * Web Packaging
 * Chrome.sockets.*
+
+https://twitter.com/cramforce/status/1118488042493186048
 
 ## ENS
 
@@ -212,7 +275,15 @@ Classify
 
 ## Content Moderation
 
-...
+Issues
+* https://github.com/ipfs/go-ipfs/issues/1070
+
+Discussions
+* https://www.reddit.com/r/ipfs/comments/3m351b/discussion_permanent_content_dmca_and_illegal/
+* https://steemit.com/ipfs/@dantheman/how-can-i-configure-ipfs-to-block-unwanted-content
+
+Govt
+* https://en.wikipedia.org/wiki/Child_abuse_image_content_list
 
 ## Visual communication  model
 
@@ -240,6 +311,10 @@ Classify
 * jim pick: same website in multiple tabs - iframe
 * Lunet
 * if ip addresses are exposed, can local daemons detect each other and negotiate activity?
+
+## Identity
+
+* https://github.com/ipfs-shipyard/pm-idm
 
 ## Notes on business prop for large network/content providers
 
@@ -491,3 +566,7 @@ ipfs archives
 * What are the recurring events?
 * 
 
+
+## Misc data
+
+* lang populations: https://www.reddit.com/r/javascript/comments/bh6ill/javascript_is_and_remains_the_queen_of/
