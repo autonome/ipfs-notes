@@ -5,28 +5,50 @@
 * My Zoom URL: https://protocol.zoom.us/my/dietrich.pl
 * My Calendly: https://calendly.com/dietrich-pl
 
-## Activities
+## Current Activities
 
 * Browser integrations
 * Metrics
 * Collaborations
 * IPFS Camp
-* Internet governance (IGF)
+* Standardization / governance
 
 Themes
 * privacy
 * offline
 * anonymity
+* censorship
+* performance
+* stability
 
 ## Playtime
 
-* how to do time series data on ipfs? ipns -> cid -> pubsupdates
+* how to build a lightweight public metrics framework on ipfs?
+* research how to do time series data on ipfs? ipns -> cid -> pubsupdates
 * IPFS PWA share target
+	* -> screenshot sharing pwa desktop mac chrome share target
 * sketchlog
 * React Native IPFS playground
 * conversational interface
 * Frame as IPFS-native browser, as registered handler for ipfs protocol
 * Multipublish: static publish -> dat/ipfs/ssb/activitypub
+
+## Theory of Change
+
+* https://en.wikipedia.org/wiki/Theory_of_change
+* https://en.wikipedia.org/wiki/Capacity_building
+
+## Stacks and Directions
+
+Publish content to network
+* pwa base
+* js-ipfs
+* share target
+
+Publish app to network
+* the dns permutations
+* sxg
+* lunet
 
 ## Primary Use-cases
 
@@ -49,19 +71,36 @@ Defining the primary user needs addressed by IPFS.
 * Reading
   * access to stored content
 
+Related issues
+* [Design: Creating Simple Websites with IPFS](https://github.com/ipfs/ipfs-gui/issues/69)
+
+## Censorship Resistance
+
+* https://www.ischool.berkeley.edu/people/xiao-qiang
+
 ## Questions, Concerns, Challenges
 
 Real feedback from the real world.
 
-* "I can't delete files" - revenge porn, intentional or accidental exposure, sysadmin requests to DMCA takedowns
-  ** Mastodon author Gargron - https://github.com/tootsuite/mastodon/issues/360#issuecomment-300249551
-* "How do my files stay up?" - the magical promise and the start reality
-  * "pinning" doesn't make sense to developers - need to use their language
-  * TODO: Find some good examples
-* "It's so slow"
-  * TODO: find those HN and Reddit thread comments
-* "Makes my laptop hot and pegs CPU"
-  * TODO: find those HN and Reddit thread comments
+"I can't delete files" - revenge porn, intentional or accidental exposure, sysadmin requests to DMCA takedowns
+* Mastodon author Gargron - https://github.com/tootsuite/mastodon/issues/360#issuecomment-300249551
+
+"How do my files stay up?" - the magical promise and the start reality
+* "pinning" doesn't make sense to developers - need to use their language
+* TODO: Find some good examples
+
+"It's so slow"
+* TODO: find those HN and Reddit thread comments
+
+"Makes my laptop hot and pegs CPU"
+* TODO: find those HN and Reddit thread comments
+
+"I suffered immensely at the hand of IPFS" - https://devpost.com/software/ethny-tracker
+  * "Syncing to an IPFS in-browser node is insufficient for distributing metadata hashes"
+
+CIDs are mutable - if we change chunking default, etc
+
+All API pathways to add a file do not result in same resulting output CID (eg folder etc)
 
 ## Projects choosing IPFS or not
 
@@ -72,6 +111,9 @@ Real feedback from the real world.
 
 * Choosing IPFS over blockchain
   * https://cryptoinsider.com/exclusive-xyo-head-of-community-explains-why-they-chose-ipfs-not-blockchain/
+
+* LineageOS on why not IPFS
+	* https://www.reddit.com/r/LineageOS/comments/brnmmd/if_lineageos_team_doesnt_want_to_host_images_for/?depth=2
 
 ## Web Standards / Browser Dependencies
 
@@ -121,6 +163,14 @@ mDNS and related
 * https://discuss.ipfs.io/t/is-it-possible-to-store-private-objects-in-ipfs-without-encrypting-them/460
 * https://www.researchgate.net/publication/320853144_IoT_data_privacy_via_blockchains_and_IPFS
 * https://www.reddit.com/r/ipfs/comments/9puvpo/question_about_ipfs_and_privacyright_to_be/
+
+## Metrics/Telemetry/Analytics
+
+* https://github.com/ipfs-shipyard/ipfs-webui/issues/980
+* https://github.com/ipfs/ipfs-cluster/issues/721
+* https://github.com/ipfs-shipyard/ipfs-webui/pull/930
+* https://github.com/ipfs-shipyard/ipfs-webui/pull/985
+* https://github.com/ipfs/awesome-ipfs/issues/200
 
 ## Slang
 
@@ -187,12 +237,25 @@ existing
 
 ## Standards participation
 
-* membership
-* wg
-* tpac
+Groups
+
+* W3C
+  * [Community group proposal](https://github.com/arewedistributedyet/arewedistributedyet/issues/27)
+	* https://github.com/w3c-dvcg/lds-ed25519-2018/issues/3
+* IETF
+* IAB
+* IGF
+* IRTC HRPC
+
+
+Pre-requisites
+
 * use-cases
-* mailing lists
-* feedback
+  * [AWDY issue](https://github.com/arewedistributedyet/arewedistributedyet/issues/22)
+
+Activities
+
+* feedback opportunities
 
 ## Dweb pitch examples
 
@@ -208,22 +271,35 @@ existing
 
 * [HN on 2019 roadmap](https://news.ycombinator.com/item?id=19647692)
 
-## Browser vendor strategy
+## Workshops/activities
 
-Drive based on use-cases
+* https://github.com/ssbc/scuttlebutt-mars-workshop
+* https://noffle.github.io/kappa-arch-workshop/build/01.html
+
+## Browser vendor approach
+
+Drive based on use-cases, make our voice heard in standards bodies, create an environment where the change we want is possible.
 
 * decision making matrix for dweb use-cases
 * articulate use-cases, and blockers
-* issues and corresponding bugs across vendors
-* (contrast against use-cases)
+* identify issues and corresponding bugs across vendors
+	* (contrast against use-cases)
 * browser integration permutation map (pros and cons for each)
 
-Classify
+Theory of change
+
+* Outcomes
+	* Browsers can communicate directly between each other without intermediary/broker
+	* Web network stack can load from and publish to swarms
+* In order for that to be possible...
+	* TODO: write out all the things that *might* need to happen in order for the outcomes to be true
+
+Classify roles, and architectural permutations
 
 * native node (internal)
 * native protocol
 * native node + web api abstraction
-* ipns/dns
+* ipns/dns/ens/etc
 * companion
 * desktop
 * gateway
@@ -255,7 +331,8 @@ https://twitter.com/cramforce/status/1118488042493186048
 
 ## ENS
 
-* https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1577.md
+* spec: https://eips.ethereum.org/EIPS/eip-1577
+* issue: https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1577.md
 * https://github.com/ipfs-shipyard/ipfs-companion/issues/678
 
 ## Transports
@@ -272,6 +349,11 @@ https://twitter.com/cramforce/status/1118488042493186048
 
 * Performance and battery testing
   * Heuristics vs use-cases
+
+## React Native
+
+* https://blog.datproject.org/2019/04/14/getting-dat-to-work-in-new-environments/
+* https://github.com/tradle/rn-nodeify
 
 ## Content Moderation
 
@@ -315,6 +397,10 @@ Govt
 ## Identity
 
 * https://github.com/ipfs-shipyard/pm-idm
+
+## Research
+
+* [FAQs](https://docs.google.com/document/d/1FBB_jn1BmwUFdZGQZN93ofcDFFoKM_P_CgwbCfH-gwk/edit)
 
 ## Notes on business prop for large network/content providers
 
