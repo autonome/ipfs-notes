@@ -50,6 +50,15 @@ Publish app to network
 * sxg
 * lunet
 
+## Climate / Power Consumption
+
+From Michelle:
+
+* [How to stop data centres from gobbling up the world’s electricity](https://www.nature.com/articles/d41586-018-06610-y)
+* [YouTube's carbon footprint is huge, but smarter web design could fix it](https://www.wired.co.uk/article/youtube-digital-waste-interaction-design)
+
+* https://github.com/mmes2/muse
+
 ## Primary Use-cases
 
 Defining the primary user needs addressed by IPFS.
@@ -78,6 +87,20 @@ Related issues
 
 * https://www.ischool.berkeley.edu/people/xiao-qiang
 
+## Performance
+
+* https://github.com/ipfs/benchmarks
+* can i use testlab to run scenarios? 
+* what's the set of information i need?
+
+Issues
+* DHT in libp2p: https://github.com/libp2p/go-libp2p-kad-dht/issues/345
+* good roundup: https://github.com/ipfs/go-ipfs/issues/6342
+
+## Debugging
+
+* https://github.com/anacrolix/go-libp2p-dht-tool/
+
 ## Questions, Concerns, Challenges
 
 Real feedback from the real world.
@@ -99,6 +122,7 @@ Real feedback from the real world.
   * "Syncing to an IPFS in-browser node is insufficient for distributing metadata hashes"
 
 CIDs are mutable - if we change chunking default, etc
+https://discuss.status.im/t/ipfs-alternatives-snt-utility/1228/5
 
 All API pathways to add a file do not result in same resulting output CID (eg folder etc)
 
@@ -114,6 +138,15 @@ All API pathways to add a file do not result in same resulting output CID (eg fo
 
 * LineageOS on why not IPFS
 	* https://www.reddit.com/r/LineageOS/comments/brnmmd/if_lineageos_team_doesnt_want_to_host_images_for/?depth=2
+
+* non-deterministic chunking
+* https://discuss.status.im/t/ipfs-alternatives-snt-utility/1228/5
+
+Dat vs IPFS
+* https://github.com/entropic-dev/entropic/issues/99#issuecomment-499106368
+
+Blockstack vs IPFS
+* https://forum.blockstack.org/t/cannot-find-ipfs-driver/6147
 
 ## Web Standards / Browser Dependencies
 
@@ -146,6 +179,10 @@ mDNS and related
 * [Add Network Service Discovery API support](https://bugzilla.mozilla.org/show_bug.cgi?id=914579)
 * [Add support for Bonjour (Rendezvous/zeroconfig) to browser](https://bugzilla.mozilla.org/show_bug.cgi?id=173804)
 
+From IPFS land
+* https://github.com/ipfs/specs
+* https://github.com/neocities/hshca
+
 ## Good Explanations
 
 * [How /webui works](https://github.com/ipfs-shipyard/ipfs-companion/issues/718#issuecomment-490257566)
@@ -155,11 +192,18 @@ mDNS and related
 
 ## Privacy
 
-* [How private is IPFS?](https://medium.com/pinata/ipfs-privacy-711f4b72b2ea?sk=de4e4a95b19260bda95fe695e63099cd) - good overview, Apr 5 2019, from Matt Ober @ Piñata
+* [How private is IPFS?](https://medium.com/pinata/ipfs-privacy-711f4b72b2ea) - good overview, Apr 5 2019, from Matt Ober @ Piñata
 * [P2P privacy research papers](https://github.com/gpestana/p2psec/tree/master/research) - notes from Gonçalo Pestana
 
+Implementations
+* https://github.com/hashmatter/p3lib
+* https://github.com/hashmatter/libp2p-onion-routing
+
+Content Moderation
+* (see also that section in this document)
 * [Infra blocklist](https://github.com/ipfs/infra/blob/master/ipfs/gateway/denylist.conf)
 
+Conversations
 * https://discuss.ipfs.io/t/is-it-possible-to-store-private-objects-in-ipfs-without-encrypting-them/460
 * https://www.researchgate.net/publication/320853144_IoT_data_privacy_via_blockchains_and_IPFS
 * https://www.reddit.com/r/ipfs/comments/9puvpo/question_about_ipfs_and_privacyright_to_be/
@@ -226,14 +270,32 @@ mDNS and related
 
 ## Architecture diagrams
 
+Want (TODO: linkme)
+
 * variations for the component, and interactions between them
 * stack
 * network view
 * dht
 * browser integration permutations
+* how dapps use blockchains+ipfs
 
-existing
+Existing references
+
+* https://github.com/protocol/design-shop/issues/112
 * https://app.mural.co/t/protocollabs6957/m/protocollabs6957/1537221476917/c9ca4403fac4054cac765237f6a9bc2a7cebec98
+
+## Network Information
+
+* https://ipinfo.io/AS40680
+* Anycast
+* peer with Packet
+
+## Talks, decks
+
+Juan's slides:
+
+- Public talks: http://talks.benet.ai/
+- Private talks: https://drive.google.com/open?id=1MqOj6SVMQEUDdUWZU_XDD82UP8GMHc0H
 
 ## Standards participation
 
@@ -252,6 +314,7 @@ Pre-requisites
 
 * use-cases
   * [AWDY issue](https://github.com/arewedistributedyet/arewedistributedyet/issues/22)
+    * [submitted](https://github.com/w3c/webrtc-nv-use-cases/issues/15#issuecomment-500303446)
 
 Activities
 
@@ -367,7 +430,7 @@ Discussions
 Govt
 * https://en.wikipedia.org/wiki/Child_abuse_image_content_list
 
-## Visual communication  model
+## Visual communication model
 
 * what is the threat model
 * what is happening
@@ -656,3 +719,7 @@ ipfs archives
 ## Misc data
 
 * lang populations: https://www.reddit.com/r/javascript/comments/bh6ill/javascript_is_and_remains_the_queen_of/
+* internet live stats
+* GlobalWebIndex
+* https://blogs.loc.gov/thesignal/2011/11/the-average-lifespan-of-a-webpage/
+* https://www.theatlantic.com/technology/archive/2015/09/how-many-websites-are-there/408151/
