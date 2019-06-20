@@ -5,6 +5,21 @@
 * My Zoom URL: https://protocol.zoom.us/my/dietrich.pl
 * My Calendly: https://calendly.com/dietrich-pl
 
+## Vision/Purpose/Why
+
+Value proposition
+* use cases
+* case studies
+* benchmarks
+
+Interesting views
+* https://medium.com/offline-camp/decentralization-is-not-enough-75b15b8bc230
+
+Communicating
+* https://news.ycombinator.com/item?id=20137918#up_20179612
+* how can I measure *my* IPFS usage? eg bandwidth, performance
+* how can I measure my IPFS exposure? bandwidth, dht connections, etc
+
 ## Current Activities
 
 * Browser integrations
@@ -97,6 +112,13 @@ Issues
 * DHT in libp2p: https://github.com/libp2p/go-libp2p-kad-dht/issues/345
 * good roundup: https://github.com/ipfs/go-ipfs/issues/6342
 
+## Bandwidth Consumption/Savings
+
+* (from homepage) ["With video delivery, a P2P approach could save 60% in bandwidth costs.", 2010](http://math.oregonstate.edu/~kovchegy/web/papers/p2p-vdn.pdf)
+* ["Reducing Bandwidth Utilization in Peer-to-Peer Networks", 2003](https://www.researchgate.net/publication/228550567_Reducing_Bandwidth_Utilization_in_Peer-to-Peer_Networks)
+
+* how can I measure *my* IPFS usage? eg bandwidth, performance
+
 ## Debugging
 
 * https://github.com/anacrolix/go-libp2p-dht-tool/
@@ -128,18 +150,18 @@ All API pathways to add a file do not result in same resulting output CID (eg fo
 
 ## Projects choosing IPFS or not
 
-* Mastodon (not)
+Mastodon (not)
 	* https://mastodon.social/@Gargron/102050448708258784
   * https://github.com/tootsuite/mastodon/issues/360
   * https://github.com/tootsuite/mastodon/issues/477
 
-* Choosing IPFS over blockchain
+Choosing IPFS over blockchain
   * https://cryptoinsider.com/exclusive-xyo-head-of-community-explains-why-they-chose-ipfs-not-blockchain/
 
-* LineageOS on why not IPFS
+LineageOS on why not IPFS
 	* https://www.reddit.com/r/LineageOS/comments/brnmmd/if_lineageos_team_doesnt_want_to_host_images_for/?depth=2
 
-* non-deterministic chunking
+non-deterministic chunking
 * https://discuss.status.im/t/ipfs-alternatives-snt-utility/1228/5
 
 Dat vs IPFS
@@ -147,6 +169,11 @@ Dat vs IPFS
 
 Blockstack vs IPFS
 * https://forum.blockstack.org/t/cannot-find-ipfs-driver/6147
+
+Blog posts and rants
+* https://macwright.org/2019/06/08/ipfs-again.html
+  * https://news.ycombinator.com/item?id=20137918
+* https://blog.boramalper.org/what-ipfs-fails-to-address/
 
 ## Web Standards / Browser Dependencies
 
@@ -268,10 +295,29 @@ Conversations
 * Secio: ["What is Secio?"](https://github.com/libp2p/go-libp2p-secio/issues/7)
 * Working groups
 
+## Design Questions
+
+Visualizing hashes
+* [on awesomeipfs](https://github.com/ipfs/awesome-ipfs/issues/176)
+* Github as example for hash-based visual display that never shows a hash
+
+Patryk work
+* [Creating simple websites](https://github.com/ipfs/ipfs-gui/issues/69)
+* [File browser](https://github.com/ipfs/ipfs-gui/issues/9)
+* [Video player](https://github.com/ipfs-shipyard/ipfs-webui/issues/920)
+* [Hash input context](https://twitter.com/patrykadas/status/1056288843035488257)
+* [the Future of Browser History](https://medium.com/free-code-camp/browserhistory-2abad38022b1)
+
+## Addressing
+
+* https://github.com/ipfs/in-web-browsers/blob/master/ADDRESSING.md
+* [Irakli's note](https://www.notion.so/Addressable-data-projections-01371f85d15747cc9dff27a6cb7292c0)
+
 ## Architecture diagrams
 
 Want (TODO: linkme)
 
+* spectrum of threat model vs configurations of IPFS
 * variations for the component, and interactions between them
 * stack
 * network view
